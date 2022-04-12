@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Intro a Bootstrap</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+    </head>
+    <body>
+        <!-- As a link -->
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="https://www.google.com" target="_blank">Introducción a Bootstrap</a>
+            </div>
+        </nav>
+        <div class="container mt-3">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input class="form-control" type="text">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">DNI</label>
+                    <input class="form-control" type="number">
+                </div>
+
+                <div class="mb-3">
+                    <label class="mb-3">Seleccione:</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Abrir menú</option>
+                        <option value="1">Opc1</option>
+                        <option value="2">Opc2</option>
+                        <option value="3">Opc3</option>
+                      </select>
+                </div>
+                <button type="submit" class="btn btn-dark">Aceptar</button>
+
+            </form>
+        </div>
+    </body>
+</html>
