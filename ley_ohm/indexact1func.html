@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ley de Ohm</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Cálculo de Corriente, Tensión y Resistencia - Basado en Ley de Ohm</span>
+            </div>
+        </nav>
+           
+        <div class="container-fluid">
+            <div class="row cards">
+                <div class="mt-3">
+                    <div class="card text-white bg-primary mb-3" style="max-width: 19rem;">
+                        <div class="card-header">Cálculo de corriente:</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+           
+
+        <div class="container mt-3">
+
+            <div class="row">
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label class="form-label">Tensión:</label>
+                                <input type="number" class="form-control" id="inp_1" placeholder="Ingrese la tensión">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label class="form-label">Resistencia:</label>
+                                <input type="number" class="form-control" id="inp_2" placeholder="Ingrese la resistencia">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+               <div class="row">
+                    <div class="mt-3">
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button onclick="recolectar()" class="btn btn-outline-primary" type="button">Calcular</button>
+                        </div>
+                    </div>
+
+                    <div class="centrar">
+                        <div class="mt-3">
+                            <label class="form-label">El resultado es:</label>
+                            <h1 id="h_resultado"></h1>
+                        </div>
+                    </div>
+               </div>
+
+
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row cards">
+                <div class="col-lg-12">
+                    <div class="mb-3">
+                        <div class="card text-white bg-danger mb-3" style="max-width: 19rem;">
+                            <div class="card-header">Cálculo de tensión:</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-3">
+
+            <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Corriente:</label>
+                                    <input type="number" class="form-control" id="inp_3" placeholder="Ingrese la corriente">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Resistencia:</label>
+                                    <input type="number" class="form-control" id="inp_4" placeholder="Ingrese la resistencia">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mt-3">
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <button onclick="recolectar2()" class="btn btn-outline-danger" type="button">Calcular</button>
+                            </div>
+                        </div>
+    
+                        <div class="centrar">
+                            <div class="mt-3">
+                                <label class="form-label">El resultado es:</label>
+                                <h1 id="h2_resultado"></h1>
+                            </div>
+                        </div>
+                   </div>
+            </div>
+
+       
+        </div>
+
+        <div class="container-fluid">
+            <div class="row cards">
+                <div class="mt-3">
+                    <div class="card text-white bg-success mb-3" style="max-width: 19rem;">
+                        <div class="card-header">Cálculo de resistencia:</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-3">
+
+            <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Tensión:</label>
+                                    <input type="number" class="form-control" id="inp_5" placeholder="Ingrese la tension">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Corriente:</label>
+                                    <input type="number" class="form-control" id="inp_6" placeholder="Ingrese la corriente">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mt-3">
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <button onclick="recolectar3()" class="btn btn-outline-success" type="button">Calcular</button>
+                            </div>
+                        </div>
+    
+                        <div class="centrar">
+                            <div class="mt-3">
+                                <label class="form-label">El resultado es:</label>
+                                <h1 id="h3_resultado"></h1>
+                            </div>
+                        </div>
+                   </div>
+            </div>
+
+       
+        </div>
+
+        <script src="mainfunc.js"></script>
+       
+    </body>
+</html>
