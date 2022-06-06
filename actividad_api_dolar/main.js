@@ -5,12 +5,29 @@ async function consumir_datos(){
    // guardo solo datos json, nada de cabeceras ni otros aditivos
    const datos_definitivos = await datos.json()
 
+   let filas = []
    datos_definitivos.forEach((element,index) => {
-        console.log(`
-            ${index} - ${element.casa.nombre} - Compra: ${element.casa.compra} - Venta: ${element.casa.venta}
-        `);      
+       let fila = `
+        <tr>
+            <td>${index+1}</td>
+            <td>${element.casa.nombre}</td>
+            <td>$${element.casa.compra}</td>
+            <td>$${element.casa.venta}</td>
+        </tr>
+       `
+       filas.push(fila)
+
    });
+   
+   document.getElementById("tbody").innerHTML = filas.join('')
+
 }
+   // datos_definitivos.forEach((element,index) => {
+   //     console.log(`
+   //         ${index} - ${element.casa.nombre} - Compra: ${element.casa.compra} - Venta: ${element.casa.venta}
+   //     `);      
+  // });
+
 
 //invoco a la función
 consumir_datos()
