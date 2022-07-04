@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crud - Localstorage</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h1">Crud</span>
+            </div>
+        </nav>
+
+        <div class="container mt-3">
+            
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre:</label>
+                        <input class="form-control" type="text" id="inp_nombre">
+                    </div>  
+                    <div class="mb-3">
+                        <label class="form-label">Apellido:</label>
+                        <input class="form-control" type="text" id="inp_apellido">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">DNI:</label>
+                        <input class="form-control" type="number" id="inp_dni">
+                    </div>
+                    <button onclick="guardar()" class="btn btn-success" id="btn_guardar">Guardar</button>
+                </div>
+
+                <div class="col-lg-8">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>DNI</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+            <script src="main.js"></script>
+    </body>
+</html>
