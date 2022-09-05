@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD - Localstorage</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <nav class="navbar bg-primary">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h1">Direcciones IP</span>
+            </div>
+        </nav>
+
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <form id="form_direcciones">
+                    <div class="mb-3">
+                        <label class="form-label">Dirección IP:</label>
+                        <input id="inp_dir" class="form-control" type="text">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Puerto:</label>
+                        <input id="inp_puerto" class="form-control" type="number">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">País:</label>
+                        <select name="pais" id="sel">
+                            <option selected disabled value="-1">Seleccione país:</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Perú">Perú</option>
+                            <option value="México">México</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Velocidad:</label>
+                        <input id="inp_vel" class="form-control" type="text">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tipo:</label>
+                        <div id="radios">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="HTTP" name="radio" id="radio1">
+                                <label class="form-check-label">HTTP</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="SOCKET" name="radio" id="radio2">
+                                <label class="form-check-label">SOCKET</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="SSH" name="radio" id="radio3">
+                                <label class="form-check-label">SSH</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="FTP" name="radio" id="radio4">
+                                <label class="form-check-label">FTP</label>  
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="SMTP" name="radio" id="radio5">
+                                <label class="form-check-label">SMTP</label>
+                            </div>
+                        </div>
+                           
+                                                                                                         
+                    </div>
+                    </form>
+                
+                   
+                    <button onclick="guardar()" id="btn_guardar" class="btn btn-dark">Guardar</button>
+                    <button onclick="actualizar()" style="display: none;" id="btn_act" class="btn btn-primary">Actualizar</button>
+                </div>
+
+                <div class="col-lg-8 col-md-8 col-sm-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Dirección IP</th>
+                                    <th>Puerto</th>
+                                    <th>País</th>
+                                    <th>Velocidad</th>
+                                    <th>Tipo</th>
+                                </tr>
+                        </thead>
+    
+                        <tbody id="tbody">
+    
+                        </tbody>
+                    </table>
+                </div> 
+
+            </div>
+                            
+        </div>    
+    
+
+
+    <script src="main.js"></script>
+    </body>
+
+</html>
